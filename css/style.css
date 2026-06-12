@@ -1,0 +1,372 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChangwonDangamRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* 기본 */
+body {
+  margin: 0;
+  padding-top: 48px;
+  background: #fff0f5;
+}
+
+/* 상단바 */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  background: linear-gradient(#dcdcdc, #bfbfbf);
+
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+/* 주소창 */
+.address {
+  background: #f2dce4;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 14px;
+}
+
+/* 메뉴 */
+.top-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-family: 'PT Serif Caption', serif;
+}
+
+.top-nav a:hover {
+  color: #d67a9c;
+}
+
+
+/* 전체 화면 영역 */
+.main-visual{
+    min-height:50vh;
+
+    display:flex;
+    align-items:center;
+}
+
+.main-visual .inner{
+    width:1100px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:70px;
+}
+
+.visual-img img{
+    width:500px;
+}
+
+.visual-text{
+    flex:1;
+}
+
+.visual-text h1{
+    font-family:'Playfair Display SC', serif;
+
+    font-size:90px;
+    font-weight:600;
+    color:#e981a6;
+    margin-bottom:20px;
+}
+
+.visual-text p{
+    font-family:'Cafe24Surround', serif;
+
+    font-size:24px;
+    font-weight:600;
+
+    color:#9a6479;
+
+    margin-bottom:25px;
+}
+
+.visual-text span{
+    display:block;
+
+    line-height:1.8;
+    font-size:18px;
+
+    max-width:500px;
+}
+
+.screen {
+  padding-top: 40px; /* 상단바 안 가리게 */
+}
+
+
+.logo {
+  font-family: 'Playfair Display SC', serif;
+  color: #d67a9c;
+}
+
+.gnb a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-family: 'PT Serif Caption', serif;
+}
+
+/* 버튼 */
+.cta-btn {
+  font-family: 'PT Serif Caption', serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f5c5d9;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.cta-btn:hover{
+  background: #fc6ea2;
+}
+
+/* resume */
+.section-inner{
+    width: 100%;
+    height: 75vh;
+}
+
+.accodion-content{
+    display: flex;
+    background-color: #fad7e3;
+}
+
+.focus{
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.focus h1{
+  padding: 30px;
+  font-family: 'PT Serif Caption', serif;
+  color: #333;
+}
+
+.number{
+  font-family: 'PT Serif Caption', serif;
+}
+
+.info{
+  font-family: 'PT Serif Caption', serif;
+  color: #1a1617;
+}
+
+.info p{
+  font-family: 'ChangwonDangamRounded', serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.accodion{
+    flex: 4;
+    display: flex;
+}
+
+.accodion * {
+    transition: 0.5s;
+}
+
+.accodion li{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+    cursor: pointer;
+    position: relative;
+    padding: 80px 40px;
+}
+
+.accodion:hover li{
+    flex: 1;
+}
+
+.accodion li:hover{
+    flex: 4;
+    background-color: #fc6ea2;
+}
+
+.accodion li:hover .number{
+    color: #ffffff;
+}
+
+.accodion li:hover p{
+    color: #ffffff;
+}
+
+.accodion li:hover h2{
+    color: #e2e1e1;
+}
+
+.accodion li:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font: 14px;
+    color: #999;
+}
+
+.accodion li .number{
+    font-size: 6rem;
+    transform: translateY(-60px);
+    position: relative;
+}
+
+.accodion li .number:after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 6px;
+    width: 100%;
+}
+
+/* Portfolio */
+.heading{
+    font-family: 'PT Serif Caption', serif;
+    color: #1a1617;
+    text-align: center;
+}
+
+
+.heading span{
+    color: #ff5c97;
+}
+
+.art_inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.arts{
+    display: flex;
+    gap: 20px;
+    counter-reset: item; 
+}
+
+.art{
+    flex: 1;
+    position: relative;
+}
+
+.art:before{ 
+  content: counter(item);
+  counter-increment:item;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  line-height:45px;
+  background-color: #908a8a;
+  color: #ffffff;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+  border-radius: 0 0 7px 0;
+}
+
+.art:hover:before{
+    background-color: #ff5c97;
+}
+
+.photo{
+    position: relative;
+    height: 500px;
+}
+
+.photo a img{
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.photo a img:first-child{
+    z-index: 1;
+}
+
+.photo:hover a img:first-child{
+    opacity: 0;
+}
+
+
+.detail{
+    position: relative;
+}
+
+.detail span{
+    display: block;
+}
+
+.name{
+    font-weight: bold;
+    font-family:'Cafe24Surround', serif;
+    font-size: 1.2rem;
+}
+
+.cta1{
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+footer{
+    width:100%;
+    padding:20px 0;
+    background:#ebafc5;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    font-size:14px;
+}
+
+.footer-inner a{
+    text-decoration:none;
+    color:#444;
+}
+
+.footer-inner span{
+    color:#777;
+    margin-left:20px;
+}
