@@ -1,0 +1,189 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap');
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChangwonDangamRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+/* 기본 */
+body {
+  margin: 0;
+  padding-top: 48px;
+  font-family: 'Pretendard', sans-serif;
+  background: #fff0f5;
+}
+
+/* 상단 모니터 바 */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  background: linear-gradient(#dcdcdc, #bfbfbf);
+
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+/* 주소창 */
+.address {
+  background: #f2dce4;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 14px;
+}
+
+/* 메뉴 */
+.top-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-family: 'PT Serif Caption', serif;
+}
+
+.top-nav a:hover {
+  color: #d67a9c;
+}
+
+/* 타이틀 */
+.page-title {
+  padding: 40px;
+}
+
+.page-title h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 45px;
+  color: #d67a9c;
+}
+
+/* 내용 영역 */
+.content {
+  padding: 0 60px 80px;
+}
+
+.container {}
+section {}
+section .inner {
+    width: 900px;
+    margin: auto;
+}
+
+.inner h1 {
+    color: #fc2a8c;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Cafe24Surround', serif;
+}
+
+
+section .inner .about-me {
+    background-color: #ffa4c6;
+    padding: 25px;
+    column-count: 2;
+    column-gap: 0;
+    margin: 15px 0;
+    position: relative;
+}
+
+section .inner .about-me::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 40%; /* 여기 숫자를 조절해서 위치 이동 */
+    border-left: 1px dashed #ffffff;
+}
+
+section .inner .about-me p {
+   margin-left: -60px;
+   font-size: 18px;
+   font-weight: bold;
+   color: #3a3a3a;
+   font-family: 'ChangwonDangamRounded', serif;
+   letter-spacing: 2px;
+}
+
+section .inner .about-me h2 {
+    column-span: all;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    font-family: 'ChangwonDangamRounded', serif;
+}
+
+section .inner .about-me h2:before {
+    content: '';
+    position: absolute;
+    background-color: #eb487f;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    z-index: -1;
+    transform: translateX(-40px);
+}
+
+section .inner .about-me img {
+    width: 260px;
+    border-radius: 300px;
+    padding: 15px;
+}
+
+section .inner .about-me img:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+    
+}
+
+@media(max-width:767px){
+    section .inner{
+        width: 100%;
+    }
+
+    section .inner h1{
+        width: 1.5rem;
+    }
+
+    section .inner .about-me{
+        column-count: 1;
+    }
+}
+
+@media(min-width:768px) and (max-width:1240px){
+    section .inner{
+        width: 100%;
+    }
+
+    section .inner h1{
+        width: 1.5rem;
+    }
+
+    section .inner .about-me{
+        column-count: 2;
+    }
+}
