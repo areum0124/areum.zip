@@ -363,10 +363,12 @@ footer{
 
 .footer-inner a{
     text-decoration:none;
+    font-family: 'PT Serif Caption', serif;
     color:#444;
 }
 
 .footer-inner span{
     color:#777;
+    font-family: 'PT Serif Caption', serif;
     margin-left:20px;
 }
