@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap');
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChangwonDangamRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+/* 기본 */
+body {
+  margin: 0;
+  padding-top: 48px;
+  font-family: 'Pretendard', sans-serif;
+  background: #fff0f5;
+}
+
+/* 상단 모니터 바 */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  background: linear-gradient(#dcdcdc, #bfbfbf);
+
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+/* 주소창 */
+.address {
+  background: #f2dce4;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'PT Serif Caption', serif;
+  font-size: 14px;
+}
+
+/* 메뉴 */
+.top-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-family: 'PT Serif Caption', serif;
+}
+
+.top-nav a:hover {
+  color: #d67a9c;
+}
+
+/* 타이틀 */
+.page-title {
+  padding: 40px;
+}
+
+.page-title h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 45px;
+  color: #d67a9c;
+}
+
+
+/* 프로젝트 박스 */
+.portfolio-detail{
+    background: #ffa4c6;
+    padding: 30px;
+    margin: 25px 23px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+/* 프로젝트 제목 */
+.portfolio-detail h2{
+    color: #fff;
+    background: #eb487f;
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-family: 'Cafe24Surround', serif;
+}
+
+/* 이미지 + 설명 */
+.detail-content{
+    display: grid;
+    grid-template-columns: 250px 250px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* 이미지 */
+.detail-content img{
+    width: 86%;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.detail-content img:hover{
+    transform: scale(1.5);
+}
+
+/* 설명 영역 */
+.detail-text{
+    border-left: 1px dashed #fff;
+    padding-left: 30px;
+}
+
+/* 설명 글 */
+.detail-text p{
+    font-size: 18.5px;
+    font-weight: bold;
+    line-height: 2;
+    color: #333;
+    font-family: 'ChangwonDangamRounded', serif;
+}
+
+/* 반응형 */
+@media (max-width: 1200px){
+
+    .inner{
+        width: 90%;
+    }
+
+    .detail-content{
+        grid-template-columns: 1fr;
+    }
+
+    .detail-text{
+        border-left: none;
+        border-top: 1px dashed #fff;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
